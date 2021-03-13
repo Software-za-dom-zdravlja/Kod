@@ -11,9 +11,12 @@ import android.os.Handler;
 import android.os.Looper;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -21,22 +24,44 @@ import com.vishnusivadas.advanced_httpurlconnection.PutData;
 
 import java.util.Calendar;
 
-public class DodatneInformacije extends AppCompatActivity {
+public class DodatneInformacije extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
      TextView text;
+     public String birth_date2;
      TextView text2;
+     Button buttonDR;
      EditText doctorName;
      Button finishB;
+     String doktor;
+     TextView text3;
+     TextView textNazad;
     private static final String TAG = "DodatneInformacije";
     private DatePickerDialog.OnDateSetListener birth_date;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dodatne_informacije);
+        getSupportActionBar().hide();
         text = (TextView) findViewById(R.id.textV);
         text2 = (TextView) findViewById(R.id.textW);
-        doctorName=(EditText)findViewById(R.id.doctorName);
+        text3=(TextView)findViewById(R.id.text3);
+        textNazad=(TextView)findViewById(R.id.textViewRe);
         finishB = (Button) findViewById(R.id.finishB);
-        text.setOnClickListener(new View.OnClickListener() {
+        buttonDR=(Button)findViewById(R.id.buttonDR);
+        Spinner spinner=(Spinner)findViewById(R.id.spinner);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(DodatneInformacije.this,
+                android.R.layout.simple_spinner_item,getResources().getStringArray(R.array.imena));
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(adapter);
+        spinner.setOnItemSelectedListener(this);
+        textNazad.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+        buttonDR.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Calendar cal = Calendar.getInstance();
@@ -60,17 +85,16 @@ public class DodatneInformacije extends AppCompatActivity {
                 Log.d(TAG, "onDateSet: mm/dd/yyy: " + month + "/" + day + "/" + year);
 
                 String date = month + "/" + day + "/" + year;
-                String birth_date = year + "-" + month + "-" + day;
+                 birth_date2 = year + "-" + month + "-" + day;
                 String tekst = "Vaš datum rođenja je: ";
                 text2.setText(tekst + date);
+                text2.setVisibility(View.VISIBLE);
             }
         };
         finishB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String doktor = doctorName.getText().toString();
-                    
-                    String datum="datum";
+               // String doktor = doctorName.getText().toString();
                 Handler handler = new Handler(Looper.getMainLooper());
                 handler.post(new Runnable() {
                     @Override
@@ -79,9 +103,9 @@ public class DodatneInformacije extends AppCompatActivity {
                         field[0] = "datum";
                         field[1] = "doktor";
                         String[] data = new String[2];
-                        data[0] = datum;
+                        data[0] = birth_date2;
                         data[1] = doktor;
-                        PutData putData = new PutData("http://192.168.1.7/LoginRegister/DodatneInformacije.php", "POST", field, data);
+                        PutData putData = new PutData("http://192.168.1.5/LoginRegister/DodatneInformacije.php", "POST", field, data);
                         if (putData.startPut()) {
                             if (putData.onComplete()) {
                                 String result = putData.getResult();
@@ -102,5 +126,36 @@ public class DodatneInformacije extends AppCompatActivity {
 
         }});
 
+    }
+
+
+    @Override
+    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+        Toast.makeText(getApplicationContext(), "Odabrali ste doktora", Toast.LENGTH_LONG).show();
+        String tekst2 = "Vaš doktor je: ";
+        switch (position) {
+            case 0:
+                     doktor="1";
+                text3.setText(tekst2+"Doktor 1");
+                break;
+            case 1:
+                    doktor="2";
+                text3.setText(tekst2+"Doktor 2");
+                break;
+            case 2:
+                doktor="3";
+                text3.setText(tekst2+"Doktor 3");
+                break;
+            case 3:
+                doktor="4";
+                text3.setText(tekst2+"Doktor 4");
+                break;
+        }
+            text3.setVisibility(View.VISIBLE);
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> parent) {
+        Toast.makeText(getApplicationContext(), "Morate odabrati doktora", Toast.LENGTH_LONG).show();
     }
 }
