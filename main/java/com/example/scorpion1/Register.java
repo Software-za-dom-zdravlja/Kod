@@ -46,6 +46,7 @@ public class Register extends AppCompatActivity implements View.OnClickListener 
                 String password = passwordR.getText().toString();
                 String email = emailR.getText().toString();
                 String kontakt_broj = numberR.getText().toString();
+                String username=name+"_"+surname;
                 if (!name.isEmpty() && !password.isEmpty() && !email.isEmpty() && !kontakt_broj.isEmpty() && isValid(email)) {
                     if (isValid(email)) {
                         Handler handler = new Handler(Looper.getMainLooper());
@@ -53,19 +54,21 @@ public class Register extends AppCompatActivity implements View.OnClickListener 
                             @Override
                             public void run() {
 
-                                String[] field = new String[5];
+                                String[] field = new String[6];
                                 field[0] = "name";
                                 field[1] = "surname";
                                 field[2] = "password";
                                 field[3] = "kontakt_broj";
                                 field[4] = "email";
-                                String[] data = new String[5];
+                                field[5]="username";
+                                String[] data = new String[6];
                                 data[0] = name;
                                 data[1] = surname;
                                 data[2] = password;
                                 data[3] = kontakt_broj;
                                 data[4] = email;
-                                PutData putData = new PutData("http://192.168.1.7/LoginRegister/signup.php", "POST", field, data);
+                                data[5]=username;
+                                PutData putData = new PutData("http://192.168.1.5/LoginRegister/signup.php", "POST", field, data);
                                 if (putData.startPut()) {
                                     if (putData.onComplete()) {
                                         String result = putData.getResult();

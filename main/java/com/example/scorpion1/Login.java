@@ -86,7 +86,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
                             data[0] = name;
                             data[1] = password;
 
-                            PutData putData = new PutData("http://192.168.1.7/LoginRegister/login.php", "POST", field, data);
+                            PutData putData = new PutData("http://192.168.1.5/LoginRegister/login.php", "POST", field, data);
                             if (putData.startPut()) {
                                 if (putData.onComplete()) {
                                     String result = putData.getResult();
