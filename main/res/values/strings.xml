@@ -23,9 +23,9 @@
     <string name="odaberite_datum">Odaberite datum</string>
     <string name="username">Username</string>
     <string-array name="imena">
-    <item>"Emil"</item>
     <item>"Doktor"</item>
     <item>"Doktor 2"</item>
     <item>"Doktor 3"</item>
+    <item>"Doktor 4"</item>
     </string-array>
 </resources>
