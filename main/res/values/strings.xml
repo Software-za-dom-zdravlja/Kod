@@ -17,4 +17,15 @@
     <string name="datum_ro_enja">Datum rođenja</string>
     <string name="odaberite_va_eg_doktora">Odaberite vašeg doktora</string>
     <string name="va_datum_ro_enja_je">Vaš datum rođenja je:</string>
+    <string name="va_doktor_je">Vaš doktor je:</string>
+    <string name="finish">Finish</string>
+    <string name="nazad">Nazad</string>
+    <string name="odaberite_datum">Odaberite datum</string>
+    <string name="username">Username</string>
+    <string-array name="imena">
+    <item>"Emil"</item>
+    <item>"Doktor"</item>
+    <item>"Doktor 2"</item>
+    <item>"Doktor 3"</item>
+    </string-array>
 </resources>
