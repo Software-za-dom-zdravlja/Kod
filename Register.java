@@ -72,7 +72,7 @@ public class Register extends AppCompatActivity implements View.OnClickListener 
                                 data[3] = kontakt_broj;
                                 data[4] = email;
                                 data[5]=username;
-                                PutData putData = new PutData("http://192.168.1.2/LoginRegister/signup.php", "POST", field, data);
+                                PutData putData = new PutData("http://IPadresa/LoginRegister/signup.php", "POST", field, data);
                                 if (putData.startPut()) {
                                     if (putData.onComplete()) {
                                         String result = putData.getResult();
