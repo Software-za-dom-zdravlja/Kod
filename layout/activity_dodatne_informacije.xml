@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg1"
+    android:padding="10dp">
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="@string/dodatne_informacije"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:fontFamily="serif"
+        android:textColor="@color/black"
+        />
+
+    <TextView
+        android:id="@+id/textV"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:fontFamily="sans-serif"
+        android:text="@string/datum_ro_enja"
+        android:textSize="30sp"
+        android:layout_marginTop="25dp"
+        android:textColor="@color/black"
+        />
+    <Button
+        android:id="@+id/buttonDR"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="@string/odaberite_datum"
+        android:textSize="20sp"
+        android:layout_marginTop="25dp"
+        />
+
+    <TextView
+        android:id="@+id/textW"
+        android:visibility="invisible"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/va_datum_ro_enja_je"
+        android:textSize="30sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="25dp"
+        />
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textColor="@color/black"
+        android:text="@string/odaberite_va_eg_doktora"
+        android:textSize="30sp"
+        />
+
+
+    <Spinner
+        android:layout_marginBottom="50dp"
+        android:id="@+id/spinner"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        />
+
+<TextView
+    android:id="@+id/text3"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/va_doktor_je"
+    android:textSize="30sp"
+    android:textColor="@color/black"
+    android:visibility="invisible"
+    />
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:id="@+id/finishB"
+        android:layout_height="wrap_content"
+        android:text="@string/finish"
+
+        android:layout_marginTop="20dp"
+        />
+
+
+    <TextView
+        android:id="@+id/textViewRe"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="@string/nazad"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:layout_marginTop="18dp"
+        android:textColor="@color/black"
+        android:layout_gravity="center_horizontal"
+        />
+
+
+</LinearLayout>
