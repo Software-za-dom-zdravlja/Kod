@@ -113,7 +113,7 @@ public class DodatneInformacije extends AppCompatActivity implements AdapterView
                         data[0] = birth_date2;
                         data[1] = doktor;
                         data[2] =fileReaderUsername;
-                        PutData putData = new PutData("http://192.168.1.2/LoginRegister/DodatneInformacije.php", "POST", field, data);
+                        PutData putData = new PutData("http://IPadresa/LoginRegister/DodatneInformacije.php", "POST", field, data);
                         if (putData.startPut()) {
                             if (putData.onComplete()) {
                                 String result = putData.getResult();
