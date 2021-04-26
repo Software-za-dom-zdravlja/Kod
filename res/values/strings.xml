@@ -1,0 +1,72 @@
+<resources>
+    <string name="app_name">Scorpion1</string>
+    <string name="remember_me">Remember me</string>
+    <string name="sign_in">Sign in</string>
+    <string name="register">Register</string>
+    <string name="password">Password</string>
+    <string name="ime_i_prezime">Ime i prezime</string>
+    <string name="log_out">Log out</string>
+    <string name="ve_ima_ra_un">Već imaš račun</string>
+    <string name="sign_up">Sign up</string>
+    <string name="broj_telefona">Broj telefona</string>
+    <string name="e_mail_adresa">E- mail adresa</string>
+    <string name="login">Login</string>
+    <string name="ime">Ime</string>
+    <string name="prezime">Prezime</string>
+    <string name="dodatne_informacije">Dodatne informacije</string>
+    <string name="datum_ro_enja">Datum rođenja</string>
+    <string name="odaberite_va_eg_doktora">Odaberite vašeg doktora</string>
+    <string name="va_datum_ro_enja_je">Vaš datum rođenja je:</string>
+    <string name="va_doktor_je">Vaš doktor je:</string>
+    <string name="finish">Finish</string>
+    <string name="nazad">Nazad</string>
+    <string name="odaberite_datum">Odaberite datum</string>
+    <string name="username">Username</string>
+    <string name="dobrodo_li">Dobrodošli</string>
+    <string name="ime_prezime">Ime_Prezime</string>
+    <string name="kod">Kod</string>
+    <string name="login_za_doktore">Login za doktore</string>
+    <string name="registracija_za_doktore">Registracija za doktore</string>
+    <string name="kalendar">Kalendar</string>
+    <string name="account">Account</string>
+    <string name="postavke">Postavke</string>
+    <string name="termin">Termin</string>
+    <string name="datum">Datum</string>
+    <string name="odaberite_datumm">Odaberite datum:</string>
+    <string name="odaberite_vrijeme">Odaberite vrijeme:</string>
+    <string name="vrijeme">Vrijeme</string>
+    <string name="dodatne_informacije2">Dodatne informacije:</string>
+    <string name="informacije_o_ra_unu">Informacije o računu</string>
+    <string name="passwordU"><u>Želim promijeniti password</u></string>
+    <string name="potvrdi">Potvrdi</string>
+    <string-array name="imena">
+        <item>"Doktor 1"</item>
+        <item>"Doktor 2"</item>
+        <item>"Doktor 3"</item>
+        <item>"Doktor 4"</item>
+    </string-array>
+    <string name="title_activity_get_data">GetData</string>
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+    <string name="hello_world">Hello Square World!</string>
+    <string name="stara_lozinka">Stara lozinka</string>
+    <string name="nova_lozinka">Nova lozinka</string>
+    <string name="title_activity_settings">SettingsActivity</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+</resources>

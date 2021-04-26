@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginStart="0dp"
+    android:background="@color/green"
+    android:padding="0dp"
+    tools:context=".Help">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Često postavljena pitanja"
+        android:textSize="30sp"
+        android:textColor="@color/black"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1. Šta je software za dom zdravlja  "
+        android:layout_marginTop="20dp"
+        android:id="@+id/pitanje1"
+        android:textSize="22sp"
+        android:textColor="@color/black"
+        app:drawableRightCompat="@mipmap/ic_arrow" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Software za dom zdravlja je sustav pomoću kojeg pacijenti mogu imati online komunikaciju sa svojim doktorom. Cilj ove aplikacije jeste smanjenje gužvi u bolnicama i sprječavanja daljnjeg širenja zaraze u bolnici među drugim pacijentima. Od pacijenta se zahtjeva da zakaže termin u vremenu kada je njegov doktor slobodan, a doktor treba biti obavješten o pregledu u određeno vrijeme."
+        android:id="@+id/odgovor1"
+        android:visibility="gone"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2. Kako odabrati termin pregleda? "
+        android:id="@+id/pitanje2"
+        android:layout_marginTop="20dp"
+        android:textSize="22sp"
+        android:textColor="@color/black"
+        app:drawableRightCompat="@mipmap/ic_arrow" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Termin se moze zakazati putem opcije u aplikaciji koja se zove 'termin'. Unutar te opcije odaberemo dan i vrijeme kada želimo posjetiti našeg doktora."
+        android:id="@+id/odgovor2"
+        android:visibility="gone"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3. asdkaskdaso  "
+        android:layout_marginTop="20dp"
+        android:textSize="25sp"
+        android:id="@+id/pitanje3"
+        android:textColor="@color/black"
+        app:drawableRightCompat="@mipmap/ic_arrow" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Odgovor"
+        android:id="@+id/odgovor3"
+        android:visibility="gone"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="4. asdkaskdaso  "
+        android:layout_marginTop="20dp"
+        android:id="@+id/pitanje4"
+        android:textSize="25sp"
+        android:textColor="@color/black"
+        app:drawableRightCompat="@mipmap/ic_arrow" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Odgovor"
+        android:id="@+id/odgovor4"
+        android:visibility="gone"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        />
+
+
+</LinearLayout>
